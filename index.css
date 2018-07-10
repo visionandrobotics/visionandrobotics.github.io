@@ -1,32 +1,54 @@
+html,body {
+    height:100%;
+}
+
 .parallax-window {
     min-height: 100px;
     /*background: transparent;*/
 }
 
-#bg-image {
-	height: 200px;
-	background-image: url(img/lab_small.jpg);
+
+@media screen and (min-width: 40em) {
+	#bg-image {
+		height: 400px;
+	}
+}
+@media screen and (max-width: 40em) {
+	#bg-image {
+		height: 150px;
+	}
 }
 
-.CNMC-logo {
-	max-width: 50%;
-	max-height: 50%;
+#bg-image {
+	/*width: 100%;*/
+	/*height: 150px;*/
+/*	height: 100%;
+	width: 100%;
+*/	background-image: url(img/lab_small.jpg);
+	background-size: cover;
 }
+
+.lab-logo {
+	position: absolute;
+	background-image: url(img/lab_logo.png);
+	background-size: cover;
+}
+
 
 .lab-logo-text-left {
-	padding: 20px 10px 20px 40px;
+	padding: 30px 10px 30px 40px;
 	font-weight: bold;
 	line-height: 60px;
 	/*background-color: #497eb9;*/
 	background-color: rgba(73,126,185, 0.8);
 	/*background-color: rgb(73,126,185);	*/
 	color: white;
-	font-size: 30px;
+	font-size: 50px;
 }
 .lab-logo-text-right {
 	line-height: 60px;
 	color: #497eb9;
-	font-size: 30px;
+	font-size: 50px;
 }
 
 .intro {
@@ -34,54 +56,63 @@
 	padding-top: 50px;
 	padding-bottom: 50px;
 	/*font-family: "Open Sans";*/
-	font-size: 10px;
-	line-height: 13.75px;
+	font-size: 16px;
+	line-height: 22px;
 	font-stretch: 100%;
 }
 
-.footer {
+.footer1 {
 	padding-top: 30px;
 	padding-bottom: 30px;
-	color: rgb(221, 221, 221);
+	color: rgb(221,221,221);
 	background-color: rgb(11, 28, 36);
+}
+
+.footer2 {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: rgb(238, 238, 238);
+	background-color: rgb(92, 95, 95);
 	font-size: 13px;
 }
 
-.gutter {
-	color: rgb(238, 238, 238);
-	background-color: rgb(92, 95, 95);
-	font-size: 11px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+@media screen and (min-width: 40em) {
+.CNMC-logo {
+	height: 100%;
 }
 
 .top-bar {
-	background-color: #d3d2d3;
-	opacity: 0.95;	
-	padding: 0 5% 0 5%;
-	/*height: 55px;*/
-	/*width: 50%;*/
-}
-
-.top-bar ul {
-	background-color: #d3d2d3;	
-	/*height: 55px;*/
+	padding: 0 80px 0 80px;
+	height: 80px;
 }
 
 .top-bar ul a {	
 	font-size: 13px;
-	/*height: 55px;*/
-	/*line-height: 55px;*/
+	font-weight: bold;
 	color: #6A696A;	
 	border-bottom: 1.5px solid #d3d2d3;
 	transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
 }
 
-.dropdown.menu a {
-	/*padding-top: 0;*/
-}
-
 .top-bar ul a:hover {
   color: white;
-  border-bottom: 1.5px solid #3085aa;
+  border-bottom: 2px solid #3085aa;
+}
+
+.top-bar-left {
+	height: 50px;
+}
+
+.top-bar-right {
+	height: 100%;
+}
+.top-bar-right ul {
+	height: 100%;
+}
+.top-bar-right a {
+	height: 100%;
+	line-height: 80px;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
 }
