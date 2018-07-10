@@ -1,0 +1,87 @@
+.parallax-window {
+    min-height: 100px;
+    /*background: transparent;*/
+}
+
+#bg-image {
+	height: 200px;
+	background-image: url(img/lab_small.jpg);
+}
+
+.CNMC-logo {
+	max-width: 50%;
+	max-height: 50%;
+}
+
+.lab-logo-text-left {
+	padding: 20px 10px 20px 40px;
+	font-weight: bold;
+	line-height: 60px;
+	/*background-color: #497eb9;*/
+	background-color: rgba(73,126,185, 0.8);
+	/*background-color: rgb(73,126,185);	*/
+	color: white;
+	font-size: 30px;
+}
+.lab-logo-text-right {
+	line-height: 60px;
+	color: #497eb9;
+	font-size: 30px;
+}
+
+.intro {
+	color: rgb(102, 102, 102);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*font-family: "Open Sans";*/
+	font-size: 10px;
+	line-height: 13.75px;
+	font-stretch: 100%;
+}
+
+.footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: rgb(221, 221, 221);
+	background-color: rgb(11, 28, 36);
+	font-size: 13px;
+}
+
+.gutter {
+	color: rgb(238, 238, 238);
+	background-color: rgb(92, 95, 95);
+	font-size: 11px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.top-bar {
+	background-color: #d3d2d3;
+	opacity: 0.95;	
+	padding: 0 5% 0 5%;
+	/*height: 55px;*/
+	/*width: 50%;*/
+}
+
+.top-bar ul {
+	background-color: #d3d2d3;	
+	/*height: 55px;*/
+}
+
+.top-bar ul a {	
+	font-size: 13px;
+	/*height: 55px;*/
+	/*line-height: 55px;*/
+	color: #6A696A;	
+	border-bottom: 1.5px solid #d3d2d3;
+	transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+.dropdown.menu a {
+	/*padding-top: 0;*/
+}
+
+.top-bar ul a:hover {
+  color: white;
+  border-bottom: 1.5px solid #3085aa;
+}
