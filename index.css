@@ -29,6 +29,7 @@ html,body {
 }
 
 .lab-logo {
+	width: 75%;
 	position: absolute;
 	background-image: url(img/lab_logo.png);
 	background-size: cover;
