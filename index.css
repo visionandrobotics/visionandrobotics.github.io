@@ -2,6 +2,16 @@ html,body {
     height:100%;
 }
 
+body {
+height: auto !important                                                                        
+  display: flex                                                                                  
+  min-height: 100vh                                                                              
+  flex-direction: column                                                                         
+}
+.content {
+  flex: 1 0
+}
+
 .parallax-window {
     min-height: 100px;
     /*background: transparent;*/
