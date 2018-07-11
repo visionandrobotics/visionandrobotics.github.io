@@ -69,19 +69,24 @@ main {
 	background-color: rgb(92, 95, 95);
 }
 
-/*.footer2 a {
+.footer2 a {
 	color: #72aed6;
 }
 
 .footer2 a:hover {
 	color: #1468a0;
 }
-*/
+
 .footer2 li {
     border-right: 1px solid rgb(120,120,120);
 }
 .footer2 li:last-child{
     border: 0;
+}
+
+.footer2 a {
+	padding-left: 8px;
+	padding-right: 8px;
 }
 
 /*.yourclass{
