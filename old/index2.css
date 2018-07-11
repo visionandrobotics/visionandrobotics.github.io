@@ -1,0 +1,90 @@
+/*.off-canvas-wrapper {
+    overflow: visible;
+}
+
+.off-canvas-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+*/
+
+.wrapper {	
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, nav, footer {
+    flex-shrink: 0;
+}
+
+
+/* Use 1 0 auto instead of just 1 for backwards compatibility with other browsers */
+main {
+    flex: 1 0 auto; 
+}
+
+/*.top-bar-left {
+	padding: 30px 0 30px 0;
+}*/
+
+@media screen and (min-width: 40em) {
+.top-bar {
+	padding: 0 80px 0 80px;
+	height: 80px;
+}
+
+
+.top-bar ul a {	
+	height: 100%;
+	line-height: 80px;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 13px;
+	font-weight: bold;
+	color: #6A696A;	
+	border-bottom: 1.5px solid rgb(230,230,230);
+	transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+.top-bar ul a:hover {
+  color: white;
+  border-bottom: 2px solid #3085aa;
+}
+}
+.intro {
+	color: rgb(102, 102, 102);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*font-family: "Open Sans";*/
+	font-size: 16px;
+	line-height: 22px;
+	font-stretch: 100%;
+}
+
+#bg-image {
+	height: 400px;
+	background-image: url(img/lab_small.jpg);
+	background-size: cover;
+}
+
+.lab-logo {
+	width: 75%;
+	position: absolute;
+	background-image: url(img/lab_logo.png);
+	background-size: cover;
+}
+
+/* top, right, bottom, left */
+.footer1 {
+	padding: 30px 0 30px 0;
+	color: rgb(221,221,221);
+	background-color: rgb(11, 28, 36);
+}
+
+.footer2 {
+	padding: 15px 0 15px 0;
+	color: rgb(238, 238, 238);
+	background-color: rgb(92, 95, 95);
+}

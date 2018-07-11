@@ -1,0 +1,22 @@
+.intro {
+	color: rgb(102, 102, 102);
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*font-family: "Open Sans";*/
+	font-size: 16px;
+	line-height: 22px;
+	font-stretch: 100%;
+}
+
+#bg-image {
+	height: 400px;
+	background-image: url(../img/lab_small.jpg);
+	background-size: cover;
+}
+
+.lab-logo {
+	width: 75%;
+	position: absolute;
+	background-image: url(../img/lab_logo.png);
+	background-size: cover;
+}
