@@ -65,7 +65,9 @@
 		</div>
 		<div class="cell small-12 small-order-1 medium-4 medium-offset-1 medium-order-2">
 		<span style="color: rgb(145, 145, 145); font-size: 13px; letter-spacing: 1px">RECENT NEWS</span><br>
-		June 5, 2018:<br> V&R Lab welcomes Corey Zheng (GA Tech, 2019) and Annie Wang (Princeton University, 2019) for a summer internship!<br>
+		{% assign news = site.data.news.first %}
+		{{news.date}}:<br>{{news.text}}<br>
+		<a href="news.html"> More news... </a>
 		</div>
 	</div>
 	</div>
@@ -108,7 +110,7 @@
 	<script>
 		$(document).foundation();
 	</script>
-	
+
 	{% if page.js %}
 		<script src="{{ page.js }}"></script>
 	{% endif %}
