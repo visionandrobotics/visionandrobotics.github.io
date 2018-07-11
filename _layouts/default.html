@@ -74,10 +74,8 @@
 	<footer class="footer2">
 	<div class="grid-container">
 	<div class="grid-x">
-		<div class="cell small-4">
-		Copyright © 2018 - Itai Katz
-		</div>
-		<div class="cell auto">
+		<div class="cell small-12 medium-4 text-center medium-text-left align-self-middle">Copyright © 2018 - Itai Katz</div>
+		<div class="cell auto" id="footer-menu">
 			<ul class="menu align-right">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="team.html">Team</a></li>
@@ -86,13 +84,6 @@
 			<li><a href="blog.html">Blog</a></li>
 			<li><a href="contact.html">Contact</a></li>
 			</ul>
-<!-- 		Home
-		Team
-		Projects
-		Papers
-		Blog
-		Contact
- -->		
  		</div>
 	</div>
 	</div>
@@ -109,29 +100,18 @@
 
 	<!-- Compressed JavaScript -->
 	<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.1/dist/js/foundation.min.js" integrity="sha256-wTcu2ZVTDMsVW8yIi4MAEPKsX04ZNW4Ahr0xZtFaBOA= sha384-jeQsPA9S1co5+XspMVKVhtst1k8mzjk63i2h2rtMEpZBOVE5i22Gdjj8IF7x8e1R sha512-th5Nh7lAgv9W5pWVbKvGpb5o0NUA/ozLF7f9uxboNqVyn5DG/azSVE8k0lKR2w7Ww648/Wnb4CsgPO4SZ7OdTw==" crossorigin="anonymous"></script>
- 	<script src="js/jquery.stellar.js"></script>
 
+	{% for js in page.jslib %}
+		<script src="{{ js }}"></script>
+	{% endfor %}
+ 	
 	<script>
 		$(document).foundation();
-		$.stellar({
-			horizontalOffset: 0,
-			verticalOffset: 0,
-			responsive: true
-		});
-
-		$(window).ready(updateHeight);
-		$(window).resize(updateHeight);
-
-		function updateHeight()
-		{
-		    var div = $('#bg-image');
-		    var width = div.width();
-		    
-		    div.css('height', 0.3*width);
-		}
-
 	</script>
-
+	
+	{% if page.js %}
+		<script src="{{ page.js }}"></script>
+	{% endif %}
 
 </body>
 </html>

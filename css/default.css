@@ -36,6 +36,7 @@ main {
 }
 
 
+
 .top-bar ul a {	
 	height: 100%;
 	line-height: 80px;
@@ -66,4 +67,10 @@ main {
 	padding: 15px 0 15px 0;
 	color: rgb(238, 238, 238);
 	background-color: rgb(92, 95, 95);
+}
+
+@media screen and (max-width: 40em) {
+#footer-menu {
+   display: none;
+  }
 }
