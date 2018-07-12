@@ -1,3 +1,5 @@
+---
+---
 /*.off-canvas-wrapper {
     overflow: visible;
 }
@@ -8,6 +10,24 @@
     height: 100vh;
 }
 */
+
+@import 'burger';
+
+.menu-button {
+	display: inline-block;
+	// padding: .5em;
+	padding: 0;
+	// background-color: #fafafa;
+	// border: 1px solid #ccc;
+}
+
+.burger-icon {
+	@include burger(25px, 3px, 5px, #444);
+}
+
+.menu-button.is-active .burger-icon {
+	@include burger-to-cross;
+}
 
 .wrapper {	
     display: flex;
@@ -28,11 +48,80 @@ main {
 /*.top-bar-left {
 	padding: 30px 0 30px 0;
 }*/
+.top-strip
+{
+	background-color: #477fbb;
+	height: 10px;
+}
+
+.top-bar {
+	color: #477fbb;
+	padding: 0 32px 0 32px;
+}
 
 @media screen and (min-width: 40em) {
+	.no-js .title-bar {
+	    display: none;
+	}
+}
+@media screen and (max-width: 40em) {
+.no-js .top-bar {
+    display: none;
+}
+}
+
+.title-bar {
+	color: #477fbb;
+	background-color: #e6e6e6;
+	font-size: 5vw;
+	font-weight: bold;
+}
+
+
+#logo {
+	object-fit: contain;
+	height: 25%;
+}
+
+#logo-small {
+	object-fit: contain;
+	height: 20%;
+}
+
+.top-bar-left {
+	display: none;
+}
+
+.top-bar-right {
+	padding: 20px 0 20px 0;
+}
+
+.top-bar ul li {
+	border-top: 1px solid rgb(200,200,200);
+}
+
+
+@media screen and (min-width: 40em) {
+
+.top-bar-left {
+	display: block;
+}
+
+.top-bar-right {
+	padding: 0;
+}
 .top-bar {
-	padding: 0 80px 0 80px;
+	padding: 0 80px 0 40px;
 	height: 80px;
+}
+
+.top-bar #logo {
+	object-fit: contain;
+	height: 100%;
+}
+
+.top-bar {
+	font-size: 32px;
 }
 
 
@@ -55,6 +144,11 @@ main {
 }
 }
 
+#bg-image {
+	height: 350px;
+	background-image: url(../img/lab_small.jpg);
+	background-size: cover;
+}
 
 /* top, right, bottom, left */
 .footer1 {
@@ -63,10 +157,24 @@ main {
 	background-color: rgb(11, 28, 36);
 }
 
+@media screen and (max-width: 40em) {
+	#contact {
+		padding-top: 30px;
+	}
+}
+
 .footer2 {
-	padding: 15px 0 15px 0;
+	padding: 2px 0 2px 0;
+	font-size: 12px;
 	color: rgb(238, 238, 238);
 	background-color: rgb(92, 95, 95);
+}
+
+@media screen and (min-width: 40em) {
+.footer2 {
+	padding: 15px 0 15px 0;
+	font-size: 16px
+}
 }
 
 .footer2 a {

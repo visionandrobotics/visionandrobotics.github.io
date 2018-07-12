@@ -1,0 +1,172 @@
+---
+---
+/*.off-canvas-wrapper {
+    overflow: visible;
+}
+
+.off-canvas-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+*/
+
+@import "_burger";
+
+.wrapper {	
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header, nav, footer {
+    flex-shrink: 0;
+}
+
+
+/* Use 1 0 auto instead of just 1 for backwards compatibility with other browsers */
+main {
+    flex: 1 0 auto; 
+}
+
+/*.top-bar-left {
+	padding: 30px 0 30px 0;
+}*/
+.top-strip
+{
+	background-color: #477fbb;
+	height: 10px;
+}
+
+.top-bar {
+	color: #477fbb;
+	padding: 0 32px 0 32px;
+}
+
+@media screen and (min-width: 40em) {
+	.no-js .title-bar {
+	    display: none;
+	}
+}
+
+.title-bar {
+	color: #477fbb;
+	background-color: #e6e6e6;
+	font-size: 5vw;
+	font-weight: bold;
+}
+
+
+.top-bar #logo {
+	/*transform: scale(0.5);*/
+	object-fit: contain;
+	height: 25%;
+}
+
+.top-bar-left {
+	display: none;
+}
+
+.top-bar-right {
+	padding: 20px 0 20px 0;
+}
+
+.top-bar ul li {
+	border-top: 1px solid rgb(200,200,200);
+}
+
+
+@media screen and (min-width: 40em) {
+
+.top-bar-left {
+	display: block;
+}
+
+.top-bar-right {
+	padding: 0;
+}
+.top-bar {
+	padding: 0 80px 0 40px;
+	height: 80px;
+}
+
+.top-bar #logo {
+	object-fit: contain;
+	height: 100%;
+}
+
+.top-bar {
+	font-size: 32px;
+}
+
+
+
+.top-bar ul a {	
+	height: 100%;
+	line-height: 80px;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: 13px;
+	font-weight: bold;
+	color: #6A696A;	
+	border-bottom: 1.5px solid rgb(230,230,230);
+	transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+}
+
+.top-bar ul a:hover {
+  color: white;
+  border-bottom: 2px solid #3085aa;
+}
+}
+
+#bg-image {
+	height: 350px;
+	background-image: url(../img/lab_small.jpg);
+	background-size: cover;
+}
+
+/* top, right, bottom, left */
+.footer1 {
+	padding: 30px 0 30px 0;
+	color: rgb(221,221,221);
+	background-color: rgb(11, 28, 36);
+}
+
+.footer2 {
+	padding: 15px 0 15px 0;
+	color: rgb(238, 238, 238);
+	background-color: rgb(92, 95, 95);
+}
+
+.footer2 a {
+	color: #72aed6;
+}
+
+.footer2 a:hover {
+	color: #1468a0;
+}
+
+.footer2 li {
+    border-right: 1px solid rgb(120,120,120);
+}
+.footer2 li:last-child{
+    border: 0;
+}
+
+.footer2 a {
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+/*.yourclass{
+    border: 1px solid rgba(255, 255, 255, 1);
+    &:last-child{
+        border: 0;
+    }
+}*/
+
+@media screen and (max-width: 40em) {
+#footer-menu {
+   display: none;
+  }
+}
