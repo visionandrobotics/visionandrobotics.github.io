@@ -69,6 +69,11 @@ main {
 		display: none;
 	}
 }
+@media screen and (max-width: 40em) {
+	.top-strip {
+		display: none;
+	}
+}
 
 .top-bar {
 	color: #477fbb;
