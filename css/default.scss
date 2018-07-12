@@ -176,6 +176,12 @@ main {
 	background-size: cover;
 }
 
+@media screen and (max-width: 40em) {
+	#bg-image {
+		margin-top: 40px;
+	}
+}
+
 /* top, right, bottom, left */
 .footer1 {
 	padding: 30px 0 30px 0;
