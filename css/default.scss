@@ -68,9 +68,13 @@ main {
 .no-js .top-bar {
     display: none;
 }
+.title-bar {
+	max-height: 40px;
+}
 }
 
 .title-bar {
+	max-height: none;
 	color: #477fbb;
 	background-color: #e6e6e6;
 	font-size: 5vw;
