@@ -81,6 +81,14 @@ main {
 	font-weight: bold;
 }
 
+#some-div {
+	float: left;
+	margin-right: 10px;
+	height: 35px !important;
+	width: 35px !important;
+	background-image: url(../img/logo-crop-small.png);
+	background-size: cover;
+}
 
 #logo {
 	object-fit: contain;
