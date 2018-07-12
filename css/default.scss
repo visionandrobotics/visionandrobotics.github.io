@@ -50,8 +50,24 @@ main {
 }*/
 .top-strip
 {
+	width: 100%;
 	background-color: #477fbb;
 	height: 10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.top-strip-small
+{
+	background-color: #477fbb;
+	height: 10px;
+}
+
+@media screen and (min-width: 40em) {
+	.top-strip-small {
+		display: none;
+	}
 }
 
 .top-bar {
@@ -130,15 +146,23 @@ main {
 
 .top-bar-left {
 	display: block;
+	padding-top: 10px;
 }
 
 .top-bar-right {
 	padding: 0;
 }
+
+.top-bar-right ul  {
+	background-color: transparent;
+	border: none;
+}
+
+
 .top-bar {
-	padding: 0 80px 0 40px;
+	padding: 0px 80px 0 40px;
 	height: 80px;
-	// background-color: rgba(230, 230, 230, 0.8);
+	background-color: rgba(230, 230, 230, 0.9);
 }
 
 // .top-bar #logo {
