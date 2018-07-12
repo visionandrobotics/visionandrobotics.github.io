@@ -48,6 +48,12 @@ main {
 /*.top-bar-left {
 	padding: 30px 0 30px 0;
 }*/
+@media screen and (max-width: 40em) {
+	.top-strip {
+		display: none;
+	}
+}
+
 .top-strip
 {
 	width: 100%;
@@ -66,11 +72,6 @@ main {
 
 @media screen and (min-width: 40em) {
 	.top-strip-small {
-		display: none;
-	}
-}
-@media screen and (max-width: 40em) {
-	.top-strip {
 		display: none;
 	}
 }
