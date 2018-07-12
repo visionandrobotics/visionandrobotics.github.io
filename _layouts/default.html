@@ -47,7 +47,7 @@
 			<a href="index.html">
 			<!-- <div id="some-div"></div> -->
 			<img id="logo-small" src="img/logo-crop-small.png"/>		
-			dVision & Robotics Laboratory
+			eVision & Robotics Laboratory
 		 	</a>
 	 	</div>
 		<a href="#" class="menu-button" id="menuButton" type=
@@ -143,11 +143,22 @@
  	
 	<script>
 		$(document).foundation();
-		$.stellar({
-			horizontalOffset: 0,
-			verticalOffset: 0,
-			responsive: true
+		jQuery(document).ready(function(){
+		    if( !navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone|iPad|iPod/i) ){
+				$.stellar({
+					horizontalOffset: 0,
+					verticalOffset: 0,
+					responsive: true
+				});
+		        
+		    }
 		});
+
+		// $.stellar({
+		// 	horizontalOffset: 0,
+		// 	verticalOffset: 0,
+		// 	responsive: true
+		// });
 
 		$(window).ready(updateHeight);
 		$(window).resize(updateHeight);

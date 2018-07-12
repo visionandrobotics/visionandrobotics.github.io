@@ -174,12 +174,11 @@ main {
 	height: 350px;
 	background-image: url(../img/lab_small.jpg);
 	background-size: cover;
-	margin-top: 200px;
 }
 
 @media screen and (max-width: 40em) {
 	#bg-image {
-		// padding-top: 200px;
+		margin-top: 40px;
 	}
 }
 
