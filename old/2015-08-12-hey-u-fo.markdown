@@ -1,0 +1,489 @@
+---
+layout: post
+title:  "Hey U: FO!"
+date:   2015-08-12 19:26:43
+author: "Itai K."
+published: false
+categories: computer-vision
+thumbnail: /assets/blog/hey-u-fo/msl-entry-crop-thumbnail.jpg
+abstract: Mars, 2012. It was a clear winter day when a UFO was spotted in the skies over red planet. This UFO wasn't attributable to weather phenomenon or a trick of the light, but was in fact an actual extraterrestrial spacecraft. 
+---
+
+<style type="text/css">
+	.sidenote {
+		background: #ddd;
+		margin-right: 0px;
+		position: absolute;
+		right: 0;
+		top: auto;
+		width: 230px;
+	}
+</style>
+
+<div class="image-container">
+	<div class="subfigure-container">
+		<div class="subfigure">
+			<img src="/assets/blog/hey-u-fo/msl-entry-crop.jpg">
+		</div>	
+	</div>
+	<div class="credit">Credit: NASA/JPL-Caltech</div>
+</div>
+
+Mars, 2012. It was a clear winter day when a UFO was spotted in the skies over red planet. It streaked through the atomsphere and landed just south of the equator. This UFO wasn't attributable to weather phenomenon or a trick of the light, but was in fact an actual extraterrestrial spacecraft.
+
+<div class="sidenote">
+Here is some sidenote text
+</div>
+
+In this case though, the extraterrestrial planet was Earth, and the UFO was our robotic ambassador named Curiosity. As part of NASA's planetary exploration program, Curiosity was our chance tdo explore Mars up close in unprecedented detail. Along with a suite of instruments it contained a new tool to explore the world around it: a sophisticated computer vision laboratory.
+
+When it came to choosing a landing site, mission planners were faced with a dilemma. The scientists wanted an "interesting" site, with varied terrain and geological formations. The engineers, however, wanted a safe, flat plain to minimize the risk of damaging the rover. Satisyfing both meant a precision landing was critical. This was to be the computer vision system's first task. Here's a geeky aside on how the process works:
+
+<div class="panel panel-default" style="background-color:#6099aa; color:#fff;width:90%; margin:0 auto; margin-top: 20px; margin-bottom: 20px">
+<div class="panel-heading" style="background-color:#6099aa; color:#fff; font:16pt;">
+	<h1 class="panel-title" style="font-size:16pt">Curiosity's Entry, Descent, and Landing (EDL) procedure</h1>
+</div>
+<div class="panel-body">
+
+<p>Dropping a 2,000 lb rover from orbit safely down to the surface is a tricky business. While this wasn't the first Mars landing, the weight and precision requirements forced NASA to consider new technologies. If you ever wanted to slow down from 11,000 miles per hour to zero in a hurry, it would look something like this:</p>
+
+<div class="row">
+	<div class="col-md-6" style="padding: 0">
+	<div class="image-container">
+		<div class="caption" style="font-size:12pt">I. Guided entry</div>
+		<div class="subfigure-container">
+			<div class="subfigure">
+				<img src="/assets/blog/hey-u-fo/msl-guided-entry.jpg">
+			</div>	
+		</div>
+		<div class="credit">Credit: NASA/JPL-Caltech</div>
+		<div class="caption">After entering the atmosphere, fire a set of maneuvering thrusters. Combined with an aerodynamic backshell, this allows the spacecraft to stabilize and "fly" to a designated landing zone.</div>
+	</div>
+	</div>
+
+	<div class="col-md-6" style="padding: 0">
+	<div class="image-container">
+		<div class="caption" style="font-size:12pt">II. Parachute descent</div>
+		<div class="subfigure-container">
+			<div class="subfigure">
+				<img src="/assets/blog/hey-u-fo/msl-parachute-descent.jpg">
+			</div>	
+		</div>
+		<div class="caption">At an altitude of six miles (similar to commercial airliners) deploy a supersonic parachute. This parachute generates 65,000 lbs of drag force and slows the spacecraft down to 180 mph.</div>
+	</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6" style="padding: 0">
+	<div class="image-container">
+		<div class="caption" style="font-size:12pt">III. Powered descent</div>
+		<div class="subfigure-container">
+			<div class="subfigure">
+				<img src="/assets/blog/hey-u-fo/msl-powered-descent.jpg">
+			</div>	
+		</div>
+		<div class="caption">Separate the backshell and parachute and use a series of rockets to further decelerate and steer towards the landing zone.</div>
+	</div>
+	</div>
+
+	<div class="col-md-6" style="padding: 0">
+	<div class="image-container">
+		<div class="caption" style="font-size:12pt">IV. Sky crane</div>
+		<div class="subfigure-container">
+			<div class="subfigure">
+				<img src="/assets/blog/hey-u-fo/msl-sky-crane.jpg">
+			</div>	
+		</div>
+		<div class="caption">Lower the rover to the surface with a series of tethers. With the rover safely on the ground, cut the tethers and fly the thruster assembly to a controlled crash landing. Welcome to Mars.</div>
+	</div>
+	</div>
+</div>
+
+<div class="sidenote">
+For a more detailed description, check out this <a href="https://www.youtube.com/watch?v=Ki_Af_o9Q9s">excellent video</a>
+<iframe width="90%" style="margin: 0 auto" src="https://www.youtube.com/embed/Ki_Af_o9Q9s" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>If the above procedure sounds complex and highly risky, you are in good company. This unlikely sequence of steps was referred to by NASA as "seven minutes of terror" for good reason. In the history of Mars exploration, only 8 of 14 landers were successful. For a more detailed description, check out this <a href="https://www.youtube.com/watch?v=Ki_Af_o9Q9s">excellent video</a> </p>
+
+</div>
+</div>
+
+This complex procedure allowed Curiosity to achieve a more precise landing than ever before. After atmospheric entry, a spacecraft is subject to uncertainty in entry angle, mass, and atmospheric drag. As a result, the expected landing zone is a region several miles in radius. Mission planners call these regions __landing ellipses__. With technological improvement these ellipses have gotten smaller over time: the 1976 Viking mission had a landing ellipse of nearly 11,000 square kilometers, while Curiosity's was only 50. 
+
+Mission planners talk about landing ellipses, the expected region where the spacecraft is expected to touch down. 
+
+<div class="image-container">
+	<div class="subfigure-container">
+		<div class="subfigure">
+			<img src="/assets/blog/hey-u-fo/mars-ellipse.jpg">			
+			<div class="caption"></div>
+		</div>		
+	</div>
+	<div class="credit">Credit: NASA</div>
+	<div class="caption">Some caption goes here</div>
+</div>
+
+<div class="chart-wrapper">
+    <div class="chart-container" id="chart2"></div>
+    <div class="caption">
+    	Some caption here
+    </div>
+</div>
+
+<script type="text/javascript" src="/highcharts/highcharts.js"></script>
+<script type="text/javascript">
+$(function () {
+ 	$('#chart2').highcharts({
+ 		toolip: {
+ 			enabled: false
+ 		},
+ 		legend: {
+ 			enabled: false
+ 		},
+ 		credits: {
+            enabled: false
+        },
+ 		chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Landing zone sizes'
+        },
+        yAxis: {        	
+            //min: 0,
+            title: {
+                text: 'Area (sq km)'
+            },
+            type: 'logarithmic'
+        },
+         xAxis: {
+            categories: [
+                'Viking (1976)',
+                'Pathfinder (1997)',
+                'Spirit & Opportunity (2004)',
+                'Phoenix (2008)',
+                'Curiosity (2012)'
+                ]
+         },
+         series: [{
+            name: '',
+            data: [10788, 5500, 1116, 744, 48],
+            dataLabels: {
+            	enabled: true,
+            	inside: true,
+            	verticalAlign: "top"
+            }
+
+        }]
+	});
+
+/*
+     $('#chart1').highcharts({
+		title: {
+			text: 'some title'
+		},
+		xAxis: {            
+            type: 'linear',
+            min: -100,
+            max: 100
+        },
+        yAxis: {
+        	type: 'linear',
+        	min: -40,
+            max: 40
+        },
+        series: [{      
+        	type: 'scatter'
+        }] 
+           		
+     }, function (chart) { // on complete
+
+     	var xPos = chart.xAxis[0].toPixels(0) / 176.0,
+     		yPos = chart.yAxis[0].toPixels(0) / 62.0;
+     	console.log([xPos, yPos]);
+        chart.renderer.circle(xPos, yPos, 1).attr({
+            fill: '#FFF',
+            stroke: 'black',
+            transform: 'scale(176,62)',
+            'vector-effect': 'non-scaling-stroke',
+            //transform: 'rotate(20,100,100),scale(2,1)',
+                'stroke-width': 1
+        	}).add();
+    });
+*/
+});
+</script>
+
+
+<div class="tform-widget"></div>
+<div class="tform-rectify"></div>
+
+Here's a bunch of other stuff. Why is this in h2?
+
+
+<style>
+
+.tform-widget {
+	position: relative;
+	width: 225px;
+	height: 300px;
+	/*background-color: red;*/
+	background: url(/assets/blog/hey-u-fo/billboards1.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.tform-rectify {
+	width: 200px;
+	height: 200px;
+	/*background-color: red;*/
+	background: url(/assets/blog/hey-u-fo/billboards1.jpg);
+	/*background-size: contain;*/
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.line {
+  stroke: #000;
+  stroke-opacity: .5;
+  stroke-width: 1px;
+  stroke-linecap: square;
+}
+
+.handle {  
+  fill: red;
+  pointer-events: all;
+  stroke: #fff;
+  stroke-width: 2px;
+  cursor: move;
+}
+
+}
+
+</style>
+<script src="/assets/blog/hey-u-fo/d3.min.js"></script>
+<script src="/assets/blog/hey-u-fo/numeric-solve.min.js"></script>
+<!--
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+<script src="http://bl.ocks.org/mbostock/raw/10571478/numeric-solve.min.js"></script>
+-->
+<script>
+$( document ).ready(function() {
+
+	var svgContainer = d3.select(".ellipses").append("svg")
+						.attr("width", 200)
+						.attr("height", 200);
+	var jsonCircles = [
+		{ "x_axis": 30, "y_axis": 30, "radius": 20, "color": "green"}];
+
+	var circle = svgContainer.selectAll("circle")
+					.data(jsonCircles)
+					.enter()
+					.append("circle");
+
+	var circleAttributes = circle
+							.attr("cx", function(d) { return d.x_axis; })
+							.attr("cy", function(d) { return d.y_axis; })
+							.attr("r", function(d) { return d.radius; })
+							.attr("fill", function(d) { return d.color; });
+
+
+	/* rectify */
+	svgRect = d3.select(".tform-rectify").append("svg")	    
+	    .attr("width", 150)
+	    .attr("height", 150)
+	    .attr("id", "rectify")
+	  	.append("g")
+	    .attr("transform", "translate(" + 25 + "," + 25 + ")");
+	    /*.append("image")
+	    	.attr("xlink:href", "/assets/blog/hey-u-fo/billboards1.jpg")
+	    	.attr("width", 100)
+	    	.attr("height", 100);
+	    	*/
+
+
+	console.log('here')
+	var margin = {top: 50, right: 50, bottom: 50, left: 50};
+	var width = 225 - margin.left - margin.right;
+    var height = 300 - margin.top - margin.bottom;
+    var transform = ["", "-webkit-", "-moz-", "-ms-", "-o-"].reduce(function(p, v) { return v + "transform" in document.body.style ? v : p; }) + "transform";
+
+    var targetPoints = [[0, 0], [width, 0], [width, height], [0, height]];
+	var sourcePoints = [[0, 0], [width, 0], [width, height], [0, height]];
+
+	d3.select(".tform-widget").selectAll("svg")	
+	    .data(["transform", "flat"])
+	  .enter().append("svg")
+	    .attr("id", function(d) { return d; })
+	    .attr("width", width + margin.left + margin.right)
+	    .attr("height", height + margin.top + margin.bottom)
+	  .append("g")
+	    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+	//d3.selectAll("#flat")
+	//	.style("background", "red");
+
+	var svgTransform = d3.select("#transform")
+	    .style(transform + "-origin", margin.left + "px " + margin.top + "px 0");
+
+	var svgFlat = d3.select("#flat");
+
+	svgTransform.select("g").selectAll(".line--x")
+	    .data(d3.range(0, width + 1, 40))
+	  	.enter().append("line")
+	    .attr("class", "line line--x")
+	    .attr("x1", function(d) { return d; })
+	    .attr("x2", function(d) { return d; })
+	    .attr("y1", 0)
+	    .attr("y2", height);
+
+	svgTransform.select("g").selectAll(".line--y")
+	    .data(d3.range(0, height + 1, 40))
+	    .enter().append("line")
+	    .attr("class", "line line--y")
+	    .attr("x1", 0)
+	    .attr("x2", width)
+	    .attr("y1", function(d) { return d; })
+	    .attr("y2", function(d) { return d; });
+
+
+    var handle = svgFlat.select("g").selectAll(".handle")
+    .data(targetPoints)
+  	.enter().append("circle")
+    .attr("class", "handle")
+    .attr("transform", function(d) { return "translate(" + d + ")"; })
+    .attr("r", 7)
+    .call(d3.behavior.drag()
+      .origin(function(d) { return {x: d[0], y: d[1]}; })
+      .on("drag", dragged));
+
+    function dragged(d) {
+ 		d3.select(this).attr("transform", "translate(" + (d[0] = d3.event.x) + "," + (d[1] = d3.event.y) + ")");
+
+ 		mat = tform([[0,0], [100,0], [100,100], [0, 100]], targetPoints );
+ 		console.log(mat)
+ 		$(".tform-rectify").attr("style", "transform: matrix3d(" + mat + ")");
+  		transformed();
+	}
+
+	function tform(source,target) {
+		for (var a = [], b = [], i = 0, n = source.length; i < n; ++i) {
+		    var s = source[i], t = target[i];
+		    a.push([s[0], s[1], 1, 0, 0, 0, -s[0] * t[0], -s[1] * t[0]]), b.push(t[0]);
+		    a.push([0, 0, 0, s[0], s[1], 1, -s[0] * t[1], -s[1] * t[1]]), b.push(t[1]);
+		}
+
+	  var X = solve(a, b, true), matrix = [
+	    X[0], X[3], 0, X[6],
+	    X[1], X[4], 0, X[7],
+	       0,    0, 1,    0,
+	    X[2], X[5], 0,    1
+	  ].map(function(x) {
+	    return d3.round(x, 6);
+	  });	
+
+	  return matrix;
+	}
+
+	function transformed() {
+	  for (var a = [], b = [], i = 0, n = sourcePoints.length; i < n; ++i) {
+	    var s = sourcePoints[i], t = targetPoints[i];
+	    a.push([s[0], s[1], 1, 0, 0, 0, -s[0] * t[0], -s[1] * t[0]]), b.push(t[0]);
+	    a.push([0, 0, 0, s[0], s[1], 1, -s[0] * t[1], -s[1] * t[1]]), b.push(t[1]);
+	  }
+
+	  var X = solve(a, b, true), matrix = [
+	    X[0], X[3], 0, X[6],
+	    X[1], X[4], 0, X[7],
+	       0,    0, 1,    0,
+	    X[2], X[5], 0,    1
+	  ].map(function(x) {
+	    return d3.round(x, 6);
+	  });
+
+	  svgTransform.style(transform, "matrix3d(" + matrix + ")");
+	}
+/*
+	var svg = d3.select(".tform-widget").append("svg")
+    	.attr("id", "tform-widget")
+    	.attr("width", width + margin.left + margin.right)
+    	.attr("height", height + margin.top + margin.bottom)
+    	.style("background", "red")
+  		.append("g")
+    	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var handle = svg.selectAll(".handle")
+    .data(targetPoints)
+  	.enter().append("circle")
+    .attr("class", "handle")
+    .attr("transform", function(d) { return "translate(" + d + ")"; })
+    .attr("r", 7)
+    .call(d3.behavior.drag()
+      .origin(function(d) { return {x: d[0], y: d[1]}; })
+      .on("drag", dragged));
+
+
+	svg.selectAll(".line--x")
+    .data(d3.range(0, width + 1, 40))
+  .enter().append("line")
+    .attr("class", "line line--x")
+    .attr("x1", function(d) { return d; })
+    .attr("x2", function(d) { return d; })
+    .attr("y1", 0)
+    .attr("y2", height);
+
+	svg.selectAll(".line--y")
+    .data(d3.range(0, height + 1, 40))
+  .enter().append("line")
+    .attr("class", "line line--y")
+    .attr("x1", 0)
+    .attr("x2", width)
+    .attr("y1", function(d) { return d; })
+    .attr("y2", function(d) { return d; });
+
+    function dragged(d) {
+ 		d3.select(this).attr("transform", "translate(" + (d[0] = d3.event.x) + "," + (d[1] = d3.event.y) + ")");
+  		transformed();
+}
+
+	function transformed() {
+		console.log('source: ' + sourcePoints);
+		console.log('target: ' + targetPoints);
+	  for (var a = [], b = [], i = 0, n = sourcePoints.length; i < n; ++i) {
+	    var s = sourcePoints[i], t = targetPoints[i];
+	    a.push([s[0], s[1], 1, 0, 0, 0, -s[0] * t[0], -s[1] * t[0]]), b.push(t[0]);
+	    a.push([0, 0, 0, s[0], s[1], 1, -s[0] * t[1], -s[1] * t[1]]), b.push(t[1]);
+	  }
+
+	  var X = solve(a, b, true), matrix = [
+	    X[0], X[3], 0, X[6],
+	    X[1], X[4], 0, X[7],
+	       0,    0, 1,    0,
+	    X[2], X[5], 0,    1
+	  ].map(function(x) {
+	    return d3.round(x, 6);
+	  });
+
+	  svg.style(transform, "matrix3d(" + matrix + ")");
+	}
+*/
+});
+</script>
+
+--
+
+Notes:
+
+Toward Improved Landing Precision on Mars
+https://behcet.ae.utexas.edu/sites/default/files/f1209_7.pdf
+
+http://www.ri.cmu.edu/pub_files/pub4/matthies_larry_2007_1/matthies_larry_2007_1.pdf
+http://www.computervisiononline.com/blog/small-computer-vision-lab-mars
+https://en.wikipedia.org/wiki/Scientific_information_from_the_Mars_Exploration_Rover_mission#/media/File:21-pc-06-temp-profile-B046R1_br.jpg
+http://mars.nasa.gov/mer/mission/tl_entry1.html

@@ -13,6 +13,14 @@
 
 @import 'burger';
 
+body {
+	font-family: 'Roboto', Arial,sans-serif;
+}
+
+a, h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif
+}
+
 .menu-button {
 	display: inline-block;
 	// padding: .5em;
@@ -273,8 +281,42 @@ main {
   }
 }
 
+.heading-wrapper {
+	width: 100%; 
+	display: block; 
+	position: relative; 
+	clear: both; 
+	overflow:hidden;
+}
+
+.heading-text {
+	float: left; 
+	padding-right: 15px;
+	color: rgb(34,34,34);
+	font-family: 'Open Sans', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	// font-weight: 600;
+}
+
+.heading-bar-outer {	
+	position: relative; 
+	overflow: hidden;
+	@media screen and (max-width: 40em) {
+		height: 26.6px; 
+	}
+	@media screen and (min-width: 40em) {
+		height: 43.33px; 
+	}
+
+}
+
+.heading-bar-inner {
+	border-top: 1px solid #bbbbbb; 
+	top: 50%; 
+	position: relative
+}
+
 .content {
-	color: rgb(102, 102, 102);
+	// color: rgb(102, 102, 102);
 	padding-top: 50px;
 	padding-bottom: 50px;
 	/*font-family: "Open Sans";*/
