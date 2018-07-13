@@ -313,6 +313,8 @@ $(function () {
 	<div class="caption">A DEC PDP-6 computer, similar to the one installed in MIT's artificial intelligence lab</div>
 </div>
 
+*This post was adapated from an article I wrote in November 2015.*
+
 In 1966, MIT professor Seymour Papert proposed a summer undergraduate project to address the nascent field of computer vision. Among its goals was to solve the now classic object recognition problem: 
 
 > The final goal is object identification which will name objects by matching them with a vocabulary of known objects.
@@ -365,7 +367,7 @@ Part of the reason for these recent developments is due to improvements in algor
 </div>
 <!-- </div> -->
 
-In this blog we plan to describe the trends and developments in computer vision and how they can be used. Since each picture tells its own story, we'll use historical data to show how computer vision can reveal previously hidden details. We have a number of interesting topics in the pipeline but if you have suggestions or topics you'd like to see, please leave us a note in the comment section below. 
+In this blog we plan to describe the trends and developments in robotics and computer vision, particularly with regards to the medical field. We have a number of interesting topics in the pipeline but if you have suggestions or topics you'd like to see, let us know. 
 
 Let's go exploring.
 

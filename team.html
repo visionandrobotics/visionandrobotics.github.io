@@ -1,11 +1,21 @@
 ---
 layout: default
+PIs:
+- name: Richard (Jaepyong) Cha, Ph.D.
+  imgpath: img/cha.jpg
+- name: Itai Katz, Ph.D.
+  imgpath: http://placehold.it/962x1280
+Staffs:
+- name: L.K. (Lung Wai) Lau, M.D.
+  imgpath: http://placehold.it/962x1280
+Interns:
+- name: Corey Zheng (GA Tech, 2019)
+  imgpath: http://placehold.it/962x1280
+- name: Annie Wang (Princeton University, 2019)
+  imgpath: http://placehold.it/962x1280
+
 <!--css: css/index.css-->
 ---
-<!-- <div class="grid-container">
-<div class="grid-x">
-<div class="cell small-10 small-offset-1">
- -->	
  <div class="heading-wrapper">
 	<h3 class="heading-text">Team</h3> 
 	<div class="heading-bar-outer">		 
@@ -13,20 +23,32 @@ layout: default
 	</div>
 </div>
 
- <h2> Principal Investigators </h2>
-	Richard (Jaepyong) Cha, Ph.D.<br>
-	Itai Katz, Ph.D.
-	<br>
-
-	<h3>Staff</h3>
-	L.K. (Lung Wai) Lau, M.D.
-	<br>
-
-	<h3>Interns</h3>
-	Corey Zheng (GA Tech, 2019)<br>
-	Annie Wang (Princeton University, 2019)
-	<br>
-
-<!-- </div>
+<h2> Principal Investigators </h2>
+<div class="grid-container">
+<div class="grid-x grid-padding-x" >
+{% for PI in page.PIs %}
+	<div class="cell small-3 medium-3"> <img src="{{ PI.imgpath }}"/></div>
+	<div class="cell small-3 medium-3">{{ PI.name }}</div>
+{% endfor %}
 </div>
-</div> -->
+</div>
+
+<h3>Staff</h3>
+<div class="grid-container">
+<div class="grid-x grid-padding-x" >
+{% for Staff in page.Staffs %}
+	<div class="cell small-3 medium-3"><img src="{{ Staff.imgpath }}"/></div>
+	<div class="cell small-3 medium-3">{{ Staff.name }}</div>
+{% endfor %}
+</div>
+</div>
+
+<h3>Interns</h3>
+<div class="grid-container">
+<div class="grid-x grid-padding-x" >
+{% for Intern in page.Interns %}
+	<div class="cell small-3 medium-3"><img src="{{ Intern.imgpath }}"/></div>
+	<div class="cell small-3 medium-3">{{ Intern.name }}</div>
+{% endfor %}
+</div>
+</div>

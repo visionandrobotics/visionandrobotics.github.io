@@ -1,8 +1,10 @@
 ---
 layout: default
+title: Trends With Benefits
 js: blog/trends-with-benefits/trends-with-benefits.js
 Highcharts: true
 ---
+<h2> {{ page.title }} </h2>
 <!-- js: js/index.js -->
 <img src="blog/trends-with-benefits/pdp6_crop.jpg">
 
@@ -26,7 +28,7 @@ Papert and his contemporaries failed to realize that the problem they faced was 
 Which of these two objects belong in the same category?
 
 
-To an external observer the field has failed to deliver on decades of promises, but in the lab progress had been slow and steady. Numerous algorithms emerged from the lab to revolutionize their respective niches, like David Lowe's SIFT features or the Viola-Jones face detector. The last few years however have seen something profound. Consider the ImageNet challenge, an international competition that pits the latest object recognition algorithms against a challenging dataset. The first few years produced unremarkable results but 2012 saw the reemergance of *deep learning*, a modernization of the 1980s neural network. The technique produced stunning results and in subsequent years accuracy has improved more than in the prior half century. Preliminary results from the 2015 competition suggest that automated object recognition is now on par with human capabilities. 
+To an external observer the field has failed to deliver on decades of promises, but in the lab progress had been slow and steady. Numerous algorithms emerged from the lab to revolutionize their respective niches, like David Lowe's SIFT features or the Viola-Jones face detector. The last few years however have seen something profound. Consider the ImageNet challenge, an international competition that pits the latest object recognition algorithms against a challenging dataset. The first few years produced unremarkable results but 2012 saw the reemergance of *deep learning*, a modernization of the 1980s neural network. The technique produced stunning results and in subsequent years accuracy has improved more than in the prior half century. Results from the 2015 competition suggest that automated object recognition is now on par with human capabilities. 
 
 <div class="grid-container">
     <div class="grid-x grid-padding-x align-center" style="background:transparent;">
@@ -53,4 +55,6 @@ Part of the reason for these recent developments is due to improvements in algor
 
 <!-- <div class="chart-container" id="chart3"></div>     -->
 
-[closing paragraph] <!--Let's go exploring.-->
+In this blog we plan to describe the trends and developments in robotics and computer vision, particularly with regards to the medical field. We have a number of interesting topics in the pipeline but if you have suggestions or topics you'd like to see, let us know.
+
+Let's go exploring.
