@@ -193,6 +193,11 @@
 
 	</script>
 
+	{{ page.highcharts }}
+	{% if page.highcharts == true or page.Highcharts == true %}
+		<script src="https://code.highcharts.com/highcharts.src.js"></script>
+	{% endif %}
+
 	{% if page.js %}
 		<script src="{{ page.js }}"></script>
 	{% endif %}

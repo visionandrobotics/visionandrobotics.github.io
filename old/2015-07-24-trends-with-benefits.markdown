@@ -355,9 +355,15 @@ As a result of this development and related ones, computer vision applications a
 
 Part of the reason for these recent developments is due to improvements in algorithms. The rigid heuristics used in the 60s gave way to powerful feature descriptors and bag-of-words models which in turn evolved into the convolutional neural networks that currently predominate. Another factor is the emergence of large datasets used for training. No longer confined to toy-size datasets, researchers today have access to million of images thanks to the ubiquity of cameras and social networking. Perhaps most importantly, it is only now that computers are sufficiently powerful to emulate what comes naturally to humans. A 1960s-era PDP-6 could compute about 170,000 instructions per second. A high-end desktop computer circa 2015 is about two million times faster. It's been said that if the techniques of the past were paired with modern datasets and computers, they would have been far more successful. Perhaps Seymour Papert was not overly ambitious, simply ahead of his time. 
 
-<div class="chart-wrapper">
-    <div class="chart-container" id="chart3"></div>    
+<!-- <div class="chart-wrapper"> -->
+<div class="grid-container">
+    <div class="grid-x grid-padding-x align-center">
+    <div class="cell small-6">
+        <div class="chart-container" id="chart3"></div>    
+    </div>
+    </div>
 </div>
+<!-- </div> -->
 
 In this blog we plan to describe the trends and developments in computer vision and how they can be used. Since each picture tells its own story, we'll use historical data to show how computer vision can reveal previously hidden details. We have a number of interesting topics in the pipeline but if you have suggestions or topics you'd like to see, please leave us a note in the comment section below. 
 
