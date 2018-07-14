@@ -4,18 +4,17 @@ PIs:
 - name: Richard (Jaepyong) Cha, Ph.D.
   imgpath: img/cha.jpg
 - name: Itai Katz, Ph.D.
-  imgpath: http://placehold.it/962x1280
 Staffs:
 - name: L.K. (Lung Wai) Lau, M.D.
-  imgpath: http://placehold.it/962x1280
 Interns:
-- name: Corey Zheng (GA Tech, 2019)
-  imgpath: http://placehold.it/962x1280
-- name: Annie Wang (Princeton University, 2019)
-  imgpath: http://placehold.it/962x1280
+- name: Corey Zheng
+  affiliation: (GA Tech, 2019)
+- name: Annie Wang
+  affiliation: (Princeton University, 2019)
 
 <!--css: css/index.css-->
 ---
+<!-- http://placehold.it/962x1280 -->
  <div class="heading-wrapper">
 	<h3 class="heading-text">Team</h3> 
 	<div class="heading-bar-outer">		 
@@ -23,32 +22,49 @@ Interns:
 	</div>
 </div>
 
+<div class="grid-x grid-padding-y" >
+
+<div class="cell small-12">
 <h2> Principal Investigators </h2>
-<div class="grid-container">
-<div class="grid-x grid-padding-x" >
-{% for PI in page.PIs %}
-	<div class="cell small-3 medium-3"> <img src="{{ PI.imgpath }}"/></div>
-	<div class="cell small-3 medium-3">{{ PI.name }}</div>
-{% endfor %}
+<div class="grid-x grid-padding-x align-bottom" >
+	{% for PI in page.PIs %}
+	<div class="cell small-6 medium-3">
+		<img src="{{ PI.imgpath }}"/><br>
+		{{ PI.name }}
+	</div>
+	{% endfor %}
 </div>
 </div>
 
+<div class="cell small-12">
 <h3>Staff</h3>
-<div class="grid-container">
-<div class="grid-x grid-padding-x" >
+<div class="grid-x grid-padding-x align-bottom" >
 {% for Staff in page.Staffs %}
-	<div class="cell small-3 medium-3"><img src="{{ Staff.imgpath }}"/></div>
-	<div class="cell small-3 medium-3">{{ Staff.name }}</div>
+	<div class="cell small-6 medium-3">
+		{% if Staff.imgpath %}
+		<img src="{{ Staff.imgpath }}"/><br>
+		{% endif %}
+		{{ Staff.name }}
+	</div>
 {% endfor %}
 </div>
 </div>
 
+<div class="cell small-12">
 <h3>Interns</h3>
-<div class="grid-container">
-<div class="grid-x grid-padding-x" >
+<div class="grid-x grid-padding-x align-bottom" >
 {% for Intern in page.Interns %}
-	<div class="cell small-3 medium-3"><img src="{{ Intern.imgpath }}"/></div>
-	<div class="cell small-3 medium-3">{{ Intern.name }}</div>
+	<div class="cell small-6 medium-3">
+		{% if Intern.imgpath %}
+		<img src="{{ Intern.imgpath }}"/><br>
+		{% endif %}
+		{{ Intern.name }}<br>
+		{% if Intern.affiliation %}
+		{{ Intern.affiliation }}
+		{% endif %}
+	</div>
 {% endfor %}
 </div>
+</div>
+
 </div>

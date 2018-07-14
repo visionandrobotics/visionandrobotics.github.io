@@ -202,13 +202,15 @@ main {
 	font-size: 13px;
 	font-weight: bold;
 	color: #6A696A;	
-	border-bottom: 1.5px solid rgb(230,230,230);
-	transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+	// border-bottom: 1.5px solid rgb(230,230,230);
+	border-bottom: 3px solid transparent;
+	box-sizing: border-box;
+	transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .top-bar ul a:hover {
   color: white;
-  border-bottom: 2px solid #3085aa;
+  border-bottom: 3px solid #3085aa;
 }
 }
 
