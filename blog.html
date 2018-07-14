@@ -1,5 +1,11 @@
 ---
 layout: default
+css: css/blog.css
+posts:
+ - title: Trends With Benefits
+   url: trends-with-benefits.html
+   imgpath: blog/trends-with-benefits/pdp6_crop.jpg
+   date: July 14, 2018
 ---
 <!--css: css/index.css-->
 
@@ -10,6 +16,60 @@ layout: default
 	</div>
 </div>
 
-<ul>
+<div class="grid-container">
+<div class="grid-x grid-margin-x grid-margin-y">
+
+{% for post in page.posts %}
+<div class="cell medium-4 small-12">
+<a href="{{ post.url }}" title="{{ post.title }}">
+<div class="caption">
+    <img class="caption__media" src="{{ post.imgpath }}" />
+    <div class="caption__overlay">
+        <h4 class="caption__overlay__title">{{ post.title }}</h4>
+        <p class="caption__overlay__content">{{ post.date }}</p>
+    </div>
+</div>
+</a>
+</div>
+{% endfor %}
+
+</div>
+</div>
+
+<!-- 
+<div class="grid-container">
+<div class="grid-x grid-margin-x grid-margin-y">
+
+<div class="cell medium-4 small-12">
+<a href="trends-with-benefits.html" title="Trends With Beneifts">
+<div class="caption">
+    <img class="caption__media" src="img/peppers.jpg" />
+    <div class="caption__overlay">
+        <h4 class="caption__overlay__title">Trends with benefits</h4>
+        <p class="caption__overlay__content">July 14, 2018</p>
+    </div>
+</div>
+</a>
+</div>
+
+<div class="cell medium-4 small-10">
+<a href="trends-with-benefits.html" title="Trends With Beneifts">
+<div class="caption">
+    <img style="object-fit: contain;" class="caption__media" src="blog/trends-with-benefits/pdp6_crop.jpg" />
+    <div class="caption__overlay">
+        <h4 class="caption__overlay__title">Trends with benefits</h4>
+        <p class="caption__overlay__content">July 14, 2018</p>
+    </div>
+</div>
+</a>
+</div>
+
+</div>
+</div>
+ -->
+
+<!-- <ul>
 	<a href="trends-with-benefits.html"><li>Trends With Benefits</li></a>
 </ul>
+ -->
+

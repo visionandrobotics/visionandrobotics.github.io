@@ -367,7 +367,7 @@ Part of the reason for these recent developments is due to improvements in algor
 </div>
 <!-- </div> -->
 
-In this blog we plan to describe the trends and developments in robotics and computer vision, particularly with regards to the medical field. We have a number of interesting topics in the pipeline but if you have suggestions or topics you'd like to see, let us know. 
+In this blog we plan to describe the trends and developments in robotics and computer vision, particularly with regards to the medical field. We have a number of interesting topics in the pipeline but if you have suggestions or topics you'd like to see, let us 
 
 Let's go exploring.
 
