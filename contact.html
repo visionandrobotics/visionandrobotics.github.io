@@ -1,5 +1,7 @@
 ---
 layout: default
+jslib: [js/jquery-ui.shake.min.js]
+js: js/contact.js
 ---
 <!--css: css/index.css-->
 
@@ -13,15 +15,47 @@ layout: default
 <div class="grid-container">
 <div class="grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6">
-	<form method="POST" action="https://formspree.io/ikatz@childrensnational.org">
-	    <input type="text" name="name" placeholder="Name">
-	    <input type="email" name="_replyto" placeholder="Email address">
-	    <input type="text" name="_subject" placeholder="Organization">
+	<form id="form" method="POST" action="https://formspree.io/ikatz@childrensnational.org">
+	    Name<input type="text" id=name name="name">
+	    <div id=required-name class=required>Required</div>
+
+	    Email<input type="email" id=email name="_replyto">
+	    
+	    <div style="position: relative;" id=required-email class=required>Required
+	    <div style="position: absolute; top: 0; left: 0" id=invalid-email class=required>Invalid email address</div>
+    	</div>
+	    
+<!-- 	    Organization<input type="text" id=organization name="_subject">
+	    <div id=required-organization class=required>Required</div>
+ -->	    
 	    <input type="text" name="_gotcha" style="display:none" />
-	    <textarea name="message" placeholder="Message"></textarea>
-	    <input type="submit" value="Send">
+	    
+	    Inquiry type
+	    <select name="_inquiry-type">
+		  <option value=""></option>
+		  <option value="career">Career</option>
+		  <option value="media">Media inquiry</option>
+		  <option value="business">Business inquiry</option>
+		  <option value="other">Other</option>
+		</select>
+
+	    Message<textarea name="message" id=message></textarea>
+	    <div id=required-message class=required>Required</div>
+	    <input id="submit-button" type="submit" value="Send">
 	</form>
 </div>
 </div>
 </div>
 
+<style>
+.required {
+	color: red;
+	font-size:10px;
+	visibility: hidden;
+	margin-bottom: 6px;
+}
+
+[type=text], [type=email], textarea {
+	margin: 0;
+}
+</style>
