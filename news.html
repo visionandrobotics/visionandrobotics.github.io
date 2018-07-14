@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
-<!-- <div class="grid-container">
-<div class="grid-x">
-<div class="cell small-10 small-offset-1"> -->
-<h3> NEWS </h3>
-<ul>
+
+<div class="heading-wrapper">
+	<h3 class="heading-text">News</h3> 
+	<div class="heading-bar-outer">		 
+		<div class="heading-bar-inner"></div>
+	</div>
+</div>
+
+<ul style="list-style-type: none;">
 {% for news in site.data.news %}
 	<li>
-		{{ news.date }}: {{ news.text }}
+		<span style="font-weight: bold">{{ news.date }}</span>	: {{ news.text }}
 	</li>
 {% endfor %}
 </ul>
-<!-- </div>
-</div>
-</div> -->

@@ -12,17 +12,43 @@ js: js/contact.js
 	</div>
 </div>
 
+<!-- <div class="grid-container">
+<div class="grid-x grid-padding-x align-center">
+<div class="cell small-12 medium-8">
+
+	<div id="name-wrapper">
+	<div class="grid-x grid-padding-x">
+	<div class="small-2 cell">
+	<label for="middle-label" class="text-right middle">Label</label>
+	</div>
+	<div class="small-10 cell">
+	<input type="text" id="middle-label" placeholder="Right- and middle-aligned text input">
+	<div id=required-name class=required>Required</div>
+	</div>
+	</div>
+	</div>
+
+</div>
+</div>
+</div>
+ -->
 <div class="grid-container">
 <div class="grid-x grid-padding-x align-center">
 <div class="cell small-12 medium-6">
 	<form id="form" method="POST" action="https://formspree.io/ikatz@childrensnational.org">
+
+
+
+ 		<div id="name-wrapper">
 	    Name<input type="text" id=name name="name">
 	    <div id=required-name class=required>Required</div>
+	    </div>
 
-	    Email<input type="email" id=email name="_replyto">
-	    
+ 		<div id="email-wrapper">
+	    Email<input type="email" id=email name="_replyto">	    
 	    <div style="position: relative;" id=required-email class=required>Required
 	    <div style="position: absolute; top: 0; left: 0" id=invalid-email class=required>Invalid email address</div>
+    	</div>
     	</div>
 	    
 <!-- 	    Organization<input type="text" id=organization name="_subject">
@@ -39,15 +65,20 @@ js: js/contact.js
 		  <option value="other">Other</option>
 		</select>
 
+ 		<div id="message-wrapper">
 	    Message<textarea name="message" id=message></textarea>
 	    <div id=required-message class=required>Required</div>
 	    <input id="submit-button" type="submit" value="Send">
+	    </div>
+	    
 	</form>
 </div>
 </div>
 </div>
 
 <style>
+
+
 .required {
 	color: red;
 	font-size:10px;
@@ -58,4 +89,13 @@ js: js/contact.js
 [type=text], [type=email], textarea {
 	margin: 0;
 }
+
+[type=text], [type=email], textarea, select {
+	border: 1px solid #ccc;
+	border-radius:10px !important;
+}
+/*
+label {
+	font-size: 16px;
+	*/
 </style>

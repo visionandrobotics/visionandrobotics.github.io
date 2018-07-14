@@ -15,6 +15,9 @@
 
 body {
 	font-family: 'Roboto', Arial,sans-serif;
+	// background-color: #ffffff;
+	// background-image: url("https://www.transparenttextures.com/patterns/cloth-alike.png");
+	// background-image: url("https://www.transparenttextures.com/patterns/binding-light.png");
 }
 
 a, h1, h2, h3, h4, h5, h6 {
@@ -177,7 +180,7 @@ main {
 .top-bar {
 	padding: 0px 80px 0 40px;
 	height: 80px;
-	background-color: rgba(230, 230, 230, 0.9);
+	background-color: rgba(200, 200, 200, 0.9);
 }
 
 // .top-bar #logo {
@@ -238,14 +241,20 @@ main {
 	padding: 2px 0 2px 0;
 	font-size: 12px;
 	color: rgb(238, 238, 238);
-	background-color: rgb(92, 95, 95);
+	// background-color: rgb(92, 95, 95);
+	background: linear-gradient(#2d2d2d, #252525);
+	border-top: 1px solid rgb(26,26,26)
 }
 
 @media screen and (min-width: 40em) {
 .footer2 {
-	padding: 15px 0 15px 0;
+	padding: 10px 0 10px 0;
 	font-size: 16px
 }
+}
+
+.footer2 .copyright {
+	color: rgb(101,101,101);
 }
 
 .footer2 a {

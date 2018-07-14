@@ -28,13 +28,13 @@ $('#submit-button')[0].addEventListener('click', function(event) {
 	$('.required').css({'visibility':'hidden'});
 
 	if (!$('#name')[0].value) {	
-		$("#name").effect("shake");
+		$("#name-wrapper").effect("shake");
 		$("#required-name").css({'visibility':'visible'});
 		valid = false
 	}
 
 	if (!$('#email')[0].value) {	
-		$("#email").effect("shake");
+		$("#email-wrapper").effect("shake");
 		$("#required-email").css({'visibility':'visible'});
 		valid = false
 	}
@@ -42,7 +42,7 @@ $('#submit-button')[0].addEventListener('click', function(event) {
 		console.log('validating: ' + $('#email')[0].value)
 		validEmail = validateEmail($('#email')[0].value);
 		if (!validEmail) {
-			$("#email").effect("shake");
+			$("#email-wrapper").effect("shake");
 			$("#invalid-email").css({'visibility':'visible'});
 		}
 		else {
@@ -60,7 +60,7 @@ $('#submit-button')[0].addEventListener('click', function(event) {
 	// }
 
 	if (!$('#message')[0].value) {	
-		$("#message").effect("shake");
+		$("#message-wrapper").effect("shake");
 		$("#required-message").css({'visibility':'visible'});
 		valid = false
 	}
