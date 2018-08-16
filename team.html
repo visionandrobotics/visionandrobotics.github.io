@@ -6,10 +6,13 @@ PIs:
 - name: Itai Katz, Ph.D.
   imgpath: img/katz_small.jpg
 Staffs:
+- name: Bo Ning, Ph.D.
+  imgpath: img/bo_ning.jpg
 - name: L.K. (Lung Wai) Lau, M.D.
 Interns:
 - name: Corey Zheng
   affiliation: (GA Tech, 2019)
+Alumni:
 - name: Annie Wang
   affiliation: (Princeton University, 2019)
 
@@ -62,6 +65,20 @@ Interns:
 		{{ Intern.name }}<br>
 		{% if Intern.affiliation %}
 		{{ Intern.affiliation }}
+		{% endif %}
+	</div>
+{% endfor %}
+</div>
+</div>
+
+<div class="cell small-12">
+<h3>Former staff</h3>
+<div class="grid-x grid-padding-x align-bottom" >
+{% for alum in page.Alumni %}
+	<div class="cell small-6 medium-3">
+		{{ alum.name }}<br>
+		{% if alum.affiliation %}
+		{{ alum.affiliation }}
 		{% endif %}
 	</div>
 {% endfor %}
